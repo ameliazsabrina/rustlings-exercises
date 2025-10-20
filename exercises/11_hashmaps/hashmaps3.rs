@@ -17,15 +17,15 @@ struct TeamScores {
 
 fn build_scores_table(results: &str) -> HashMap<&str, TeamScores> {
     // The name of the team is the key and its associated struct is the value.
-    let mut scores = HashMap::<&str, TeamScores>::new();
+    let scores = HashMap::<&str, TeamScores>::new();
 
     for line in results.lines() {
         let mut split_iterator = line.split(',');
         // NOTE: We use `unwrap` because we didn't deal with error handling yet.
-        let team_1_name = split_iterator.next().unwrap();
-        let team_2_name = split_iterator.next().unwrap();
-        let team_1_score: u8 = split_iterator.next().unwrap().parse().unwrap();
-        let team_2_score: u8 = split_iterator.next().unwrap().parse().unwrap();
+        let _team_1_name = split_iterator.next().unwrap();
+        let _team_2_name = split_iterator.next().unwrap();
+        let _team_1_score: u8 = split_iterator.next().unwrap().parse().unwrap();
+        let _team_2_score: u8 = split_iterator.next().unwrap().parse().unwrap();
 
         // TODO: Populate the scores table with the extracted details.
         // Keep in mind that goals scored by team 1 will be the number of goals
